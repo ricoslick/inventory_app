@@ -1,24 +1,6 @@
-# README
+# IT Inventory Application: simple Ruby on Rails based inventory app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple application for keeping track of inventory items in the IT Department.
+ 
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
