@@ -1,0 +1,42 @@
+<footer class="page-footer font-small pt-4 bg-primary" id="footer">
+	<div class="container-fluid text-center text-md-left">
+		<div class="row">
+			<div class="col-md-6 mt-md-0 mt-3"><a href="http://eapi.co.ke"><%= image_tag "EAPI_Logo.png" %></a>
+				<p>Better by Design</p>
+			
+			</div>
+			<hr class="clearfix w-100 d-md-none pb-3">
+
+
+			<div class="col-md-3 mb-md-0 mb-3">
+				<h5>Contacts</h5>
+				<dl class="contact-list">
+					<dt>Adress:</dt>
+					<dd>Kitui road, Off Kampala road, Nairobi</dd>
+				</dl>
+				<dl class="contact-list">
+					<dt>Email:</dt>
+					<dd>helpdesk@eapi.co.ke</dd>
+				</dl>
+				<dl class="contact-list">
+					<dt>Phone Number:</dt>
+					<dd>+254 20 3955000</dd>
+				</dl>
+			</div>
+
+			<div class="col-md-3 mb-md-0 mb-3">
+				<h5>Links</h5>
+				<nav>
+					<ul>
+						<li><%= link_to "About", about_path, id:"about" %></li>
+						<li><%= link_to "Contact",	contact_path, id:"contact" %></li>
+						<li> <%= link_to "Sign out", '#', id:"signout" %></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer-copyright text-center py-3">© 2018 Copyright:
+	           <a href="http://eapi.co.ke">EAPI</a>
+	        </div>
+		</div>
+	</div>
+</footer>

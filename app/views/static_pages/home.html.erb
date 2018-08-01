@@ -1,0 +1,30 @@
+	
+<div id="inventory" class="carousel slide" data-ride="carousel">
+
+	<!-- Indicators: shows number of slides in a carousel -->
+	<ul class="carousel-indicators">
+		<li data-target="#inventory" data-slide-to="0" class="active"></li>
+		<li data-target="#inventory" data-slide-to="1"></li>
+		<li data-target="#inventory" data-slide-to="2"></li>
+	</ul>
+
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<%= image_tag("IT_Equipment_2.png", srcset: [["IT_Equipment_2_1024.png", "1024w"], ["IT_Equipment_2_1980.png", "1980w"]], sizes:"100vw" ) %>
+		</div>
+		<div class="carousel-item">
+			<%= image_tag("IT_Equipment_3.png", srcset: [["IT_Equipment_3_1024.png", "1024w"], ["IT_Equipment_3_1980.png", "1980w"]], sizes:"100vw") %>
+		</div>
+		<div class="carousel-item">
+			<%= image_tag("IT_Equipment_1.png", srcset: [["IT_Equipment_1_1024.png", "1024w"], ["IT_Equipment_1_1980.png", "1980w"]], sizes:"100vw") %>
+		</div>
+	</div>
+
+		<!-- Left and Right controls -->
+		<a class="carousel-control-prev" href="#inventory" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#inventory" role="button" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+</div>
