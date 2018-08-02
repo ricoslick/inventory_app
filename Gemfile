@@ -12,6 +12,7 @@ gem 'bootstrap', '4.1.3'
 gem 'bcrypt'
 gem 'will_paginate', '3.1.6'
 gem 'bootstrap-will_paginate'
+gem 'autoprefixer-rails', '9.0.0'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
@@ -33,6 +34,8 @@ group :asset do
 	# gem 'therubyracer', platforms: :ruby
 	# Use CoffeeScript for .coffee assets and views
 	gem 'coffee-rails', '~> 4.2'
+
+	gem 'coffee-script-source', '1.8.0'
 end
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'

@@ -166,6 +166,11 @@ input, textarea, select, .uneditable-input {
 	@include box_sizing;
 }
 
+#account{
+	font-weight: bold;
+	text-align: center;
+}
+
 #error_explanation {
 	color: #f00;
 	ul {

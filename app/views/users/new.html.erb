@@ -1,13 +1,16 @@
 <% provide(:title, 'Sign Up') %>
 <div class="jumbotron jumbotron-fluid">	
 	<h1>Sign up</h1>
-	<p>Create an account here</p>
+	<p id="account">Create an account here</p>
 </div>
 
 <div class="container-fluid">
 	<ul class="list-group">
 		<li class="list-group-item">
-			
+			<%= form_for(User.new) do |f| %> 
+				<%= render 'fields', f: f %>
+				<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+			<% end %>
 		</li>
 	</ul>
 </div>
