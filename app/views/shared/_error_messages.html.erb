@@ -1,28 +1,12 @@
-<% if object.errors.any? %>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-	  View Errors
-	</button>
-	<div class="modal" id="myModal">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<!-- Modal Header -->
-				<h4 class="modal-title">Error!</h4>
-				<button type="button" class="close" data-dismiss="modal">x</button>
-			</div>
-			<!-- Modal Body -->
-			<div class="modal-body">
-				<div class="alert alert-error">
-					The form contains <%= pluralize(@user.errors.count, "error") %>
-				</div>
-				<ul>
-					<% @user.errors.full_messages.each do |msg| %>
-						<li>* <%= msg %></li>
-					<% end %>
-				</ul>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-			</div>
+<% if (User.new).errors.any? %>
+	<div id="error_explanation">
+		<div class="alert alert-danger">
+			The form contains <%= pluralize((User.new).errors.count, "error") %>
 		</div>
+		<ul>
+		<% (User.new).errors.full_messages.each do |msg| %>
+			<li>* <%= msg %></li>
+		<% end %>
+		</ul>
 	</div>
 <% end %>
