@@ -2,6 +2,7 @@ class User < ApplicationRecord
 	include ActiveModel::ForbiddenAttributesProtection
 
 	has_secure_password
+	has_attached_file :avatar
 
 	before_save { |user| user.email = email.downcase }
 	before_save :create_remember_token
@@ -13,6 +14,11 @@ class User < ApplicationRecord
 	 uniqueness: {case_sensitive: false})
 	validates(:password, presence: true, length: { minimum: 6 })
 	validates(:password_confirmation, presence: true)
+	validates(:avatar, attachment_presence: true)
+	validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+	validates_with(AttachmentPresenceValidator, attributes: :avatar)
+	validates_with(AttachmentSizeValidator, attributes: :avatar, less_than: 1.megabytes)
+
 
 	private
 

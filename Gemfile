@@ -13,6 +13,7 @@ gem 'bcrypt'
 gem 'will_paginate', '3.1.6'
 gem 'bootstrap-will_paginate'
 gem 'autoprefixer-rails', '9.0.0'
+gem 'paperclip'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
