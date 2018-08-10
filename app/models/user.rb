@@ -14,12 +14,8 @@ class User < ApplicationRecord
 	 uniqueness: {case_sensitive: false})
 	validates(:password, presence: true, length: { minimum: 6 })
 	validates(:password_confirmation, presence: true)
-	validates(:avatar, attachment_presence: true)
 	validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
-	validates_with(AttachmentPresenceValidator, attributes: :avatar)
-	validates_with(AttachmentSizeValidator, attributes: :avatar, less_than: 1.megabytes)
-
-
+	
 	private
 
 		def create_remember_token
