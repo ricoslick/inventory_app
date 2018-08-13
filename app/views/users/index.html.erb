@@ -18,6 +18,9 @@
 						<th scope="row"><%= user.name %></th>
 						<td><%= user.email %></td>
 						<td><%= user.department %></td>
+						<% if current_user.admin? && !current_user?(user)%>
+							<td> <%= link_to "Delete Account", user, method: :delete, data: { confirm: "You sure?" }, id: "admin_field" %></td>
+						<% end %>
 					</tr>
 				</tbody>
 			<% end %>	
