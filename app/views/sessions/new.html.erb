@@ -10,6 +10,9 @@
 		<ul class="list-group">
 			<li class="list-group-item">
 				<%= form_for(:session, url: sessions_path) do |f| %> 
+					<% if flash[:notice] %>
+    					<div class="notice"><%= flash[:notice] %></div>
+ 					<% end %>
 					<%= render 'shared/login_errors' %>
 					<%= render 'field', f: f %>
 				<%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
