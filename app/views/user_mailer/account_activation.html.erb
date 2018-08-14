@@ -1,0 +1,9 @@
+<% provide(:title, 'Activated') %>
+<div class="jumbotron jumbotron-fluid">	
+	<h1>Activation Successful</h1>
+	<p id="account"> Hi <%= @user.name %></p>
+
+	<p id="account">Welcome to the EAPI Inventory App! Click on the link below to activate your account: </p>
+
+	<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
+</div>
