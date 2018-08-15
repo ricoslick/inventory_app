@@ -4,6 +4,7 @@
 	<%= f.text_field :email, text_field_html: {maxlength: 15, size: 20} %>
 
 	<%= f.label :password, label_html: {maxlength: 15, size: 20} %>
+	<%= link_to "(forgot password?)", new_password_reset_path, id:"signup" %>
 	<%= f.password_field :password, password_field_html: {maxlength: 15, size: 20} %>
 
 	
