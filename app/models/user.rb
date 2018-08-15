@@ -4,7 +4,7 @@ class User < ApplicationRecord
 	has_secure_password
 	has_attached_file :avatar
 
-	attr_accessor :activation_token
+	attr_accessor :activation_digest
 	before_save { |user| user.email = email.downcase }
 	before_save :create_remember_token
 	before_create :create_activation_digest
@@ -37,7 +37,7 @@ class User < ApplicationRecord
 		end
 
 		def create_activation_digest
-    		self.activation_token = SecureRandom.urlsafe_base64
+    		self.activation_digest = SecureRandom.urlsafe_base64
   		end
 end
 

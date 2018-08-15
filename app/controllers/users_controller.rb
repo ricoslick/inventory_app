@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   	if @user.save
   		# Handle a successful save.
       @user.send_activation_email
-  		flash[:success] = "Please check your email to activate your account."
+  		flash[:info] = "Please check your email to activate your account."
   		redirect_to @user
   	else
   		render 'new'
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User destroyed"
+    flash[:success] = "User Account Deleted"
     redirect_to users_path
   end
 
