@@ -1,0 +1,23 @@
+<% provide(:title, "Reset Password") %>
+<div class="jumbotron jumbotron-fluid">	
+	<h1>Forgot Password?</h1>
+	<p id="account">Reset it Here</p>
+</div>
+
+<div class="row">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-5">
+		<ul class="list-group">
+			<li class="list-group-item">
+				<%= form_for(@user, url: password_reset_path(params[:id])) do |f| %> 
+					<% if flash[:info] %>
+    					<div class="notice"><%= flash[:info] %></div>
+ 					<% end %>
+					<%= render 'shared/error_messages' %>
+					<%= render 'pass_fields', f: f %>
+				<%= f.submit "Update Password", class: "btn btn-large btn-primary" %>
+				<% end %>
+			</li>
+		</ul>
+	</div>
+</div>
