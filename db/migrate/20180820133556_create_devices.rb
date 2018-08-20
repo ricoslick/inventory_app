@@ -1,0 +1,14 @@
+class CreateDevices < ActiveRecord::Migration[5.1]
+  def change
+    create_table :devices do |t|
+      t.string :type
+      t.references :user, foreign_key: true
+      t.string :make
+      t.string :model
+      t.string :serial
+
+      t.timestamps
+    end
+    add_index :devices, [:user_id, :created_at]
+  end
+end
