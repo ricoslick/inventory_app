@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @devices = @user.devices.paginate(page: params[:page])
   end
 
 
@@ -53,11 +54,6 @@ class UsersController < ApplicationController
 
   def user_params
 	 params.require(:user).permit(:name, :email, :department, :password, :password_confirmation, :avatar)
-  end
-
-  def signed_in_user
-    store_location
-    redirect_to signin_path, notice: "Please sign in." unless signed_in?
   end
 
   def correct_user

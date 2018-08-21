@@ -4,12 +4,14 @@ Rails.application.routes.draw do
 	resources :sessions, only: [:new, :create, :destroy]
 	resources :account_activations, only: [:edit]
 	resources :password_resets,		only: [:new, :create, :edit, :update] 
+	resources :devices,	only: [:create, :destroy] # add edit later
 
 	root to: 'static_pages#home', via:  :get
 
 	match '/signup', to: 'users#new', via: :get
 	match '/signin', to: 'sessions#new', via: :get
 	match '/signout', to: 'sessions#destroy', via: :delete
+	match '/devices', to: 'devices#new', via: :get
 
 	match '/help', to: 'static_pages#help', via: :get
 

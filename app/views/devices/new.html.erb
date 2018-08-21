@@ -1,0 +1,22 @@
+<% provide(:title, "Add Inventory") %>
+<% if signed_in? %>
+	<div class="jumbotron jumbotron-fluid">	
+		<h1>Add Inventory Item</h1>
+		<p id="account">Add items to the inventory list from here</p>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-5">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<%= form_for(@device) do |f| %> 
+						<%= render 'shared/flash' %>
+						<%= render 'shared/device_form', f: f %>
+					<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+					<% end %>
+				</li>
+			</ul>
+		</div>
+	</div>
+<% end %>
