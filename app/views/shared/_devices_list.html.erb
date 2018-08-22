@@ -1,0 +1,40 @@
+<% provide(:title, 'Inventory List') %>
+<div class="row">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-8">
+		<% if signed_in? %>
+			<h2 id="aboutus">Complete Device Inventory List </h2>
+			<table class="table table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Created by</th>
+						<th scope="col">Type</th>
+						<th scope="col">Make</th>
+						<th scope="col">Model</th>
+						<th scope="col">Serial</th>
+						<th scope="col">Created at</th>
+						<th scope="col">Age</th>
+					</tr>
+				</thead>
+			<% (Device.all).each do |device| %>
+				<tbody>
+				<tr>
+					<th scope="row"><%= link_to device.user.name, device.user, id:"signup" %></th>
+					<td><%= device.category %></td>
+					<td><%= device.make %></td>
+					<td><%= device.model %></td>
+					<td><%= device.serial %></td>
+					<td><%= device.created_at %></td>
+					<td><%= time_ago_in_words(device.created_at) %> old</td>
+				</tr>
+			</tbody>
+			<% end %>
+			</table>
+		<% else %>
+			<div class="jumbotron jumbotron-fluid">	
+				<h1>Nothing to see here</h1>
+				<p id="account">To view inventory list please Login Here: <%= link_to "Log in", signin_path, id:"signup" %></p>
+			</div>
+		<% end %> 
+	</div>
+</div>

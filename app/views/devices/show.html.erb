@@ -1,0 +1,18 @@
+<% provide(:title, "Inventory Added") %>
+<h2 id="aboutus"> Device Added! </h2>
+			<table class="table table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Created by</th>
+						<th scope="col">Type</th>
+						<th scope="col">Make</th>
+						<th scope="col">Model</th>
+						<th scope="col">Serial Number</th>
+						<th scope="col">Created at</th>
+						<th scope="col">Age</th>
+					</tr>
+				</thead>
+				<%= render @device %>
+			</table>
+			<%= link_to "Show My Devices", current_user, class: "btn btn-secondary btn-lg align-right" %>
+			<%= link_to "Show All Devices", current_user, class: "btn btn-primary btn-lg align-center" %>

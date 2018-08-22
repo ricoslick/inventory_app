@@ -1,19 +1,8 @@
-<table class="table table-borderless">
-			<thead class="thead-dark">
-				<tr>
-					<th scope="col">Created by</th>
-					<th scope="col">Type</th>
-					<th scope="col">Make</th>
-					<th scope="col">Model</th>
-					<th scope="col">Serial Number</th>
-					<th scope="col">Created at</th>
-					<th scope="col">Age</th>
-				</tr>
-			</thead>
+
 			<tbody>
 				<tr>
-					<th scope="row"><%= link_to device.user.name, device.user %></th>
-					<td><%= device.type %></td>
+					<th scope="row"><%= link_to device.user.name, device.user, id:"signup" %></th>
+					<td><%= device.category %></td>
 					<td><%= device.make %></td>
 					<td><%= device.model %></td>
 					<td><%= device.serial %></td>
@@ -21,4 +10,3 @@
 					<td><%= time_ago_in_words(device.created_at) %> old</td>
 				</tr>
 			</tbody>
-		</table>

@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
 	match '/contact', to: 'static_pages#contact', via: :get
 
+	match '/inventory', to: 'static_pages#inventory', via: :get
+
+
+
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

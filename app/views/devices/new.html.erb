@@ -12,6 +12,7 @@
 				<li class="list-group-item">
 					<%= form_for(@device) do |f| %> 
 						<%= render 'shared/flash' %>
+						<%= render 'shared/device_errors' %>
 						<%= render 'shared/device_form', f: f %>
 					<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
 					<% end %>

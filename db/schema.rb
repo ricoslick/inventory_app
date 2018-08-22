@@ -10,20 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180820133556) do
+ActiveRecord::Schema.define(version: 20180822055030) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "devices", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
     t.bigint "user_id"
     t.string "make"
     t.string "model"
     t.string "serial"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "created_at"], name: "index_devices_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_devices_on_user_id"
   end
 
