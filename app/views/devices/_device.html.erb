@@ -8,5 +8,6 @@
 					<td><%= device.serial %></td>
 					<td><%= device.created_at %></td>
 					<td><%= time_ago_in_words(device.created_at) %> old</td>
+					<td><%= link_to "Remove Device", device, method: :delete, class: "btn btn-large btn-primary" %></td>
 				</tr>
 			</tbody>

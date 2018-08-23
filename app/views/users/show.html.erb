@@ -38,8 +38,8 @@
 					</tr>
 				</thead>
 				<%= render @devices %>
-				<%= will_paginate @devices %>
 			</table>
+			<%= will_paginate @devices, id: "signup", class:"pagination pagination-bg" %>
 		<% end %> 
 	</div>
 </div>

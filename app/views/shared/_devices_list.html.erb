@@ -1,6 +1,10 @@
 <% provide(:title, 'Inventory List') %>
 <div class="row">
+<% if signed_in? %>
 	<div class="col-sm-3"></div>
+<% else %>
+	<div class="col-sm-3"><%= image_tag 'see_no_evil.png' %></div>
+<% end %>
 	<div class="col-sm-8">
 		<% if signed_in? %>
 			<h2 id="aboutus">Complete Device Inventory List </h2>
@@ -33,7 +37,7 @@
 		<% else %>
 			<div class="jumbotron jumbotron-fluid">	
 				<h1>Nothing to see here</h1>
-				<p id="account">To view inventory list please Login Here: <%= link_to "Log in", signin_path, id:"signup" %></p>
+				<p id="account">To view inventory list please login here: <%= link_to "Log in", signin_path, id:"signup" %></p>
 			</div>
 		<% end %> 
 	</div>

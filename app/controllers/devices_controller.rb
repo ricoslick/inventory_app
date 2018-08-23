@@ -1,6 +1,6 @@
 class DevicesController < ApplicationController
 
-	before_action :signed_in_user, only: [:create]
+	before_action :signed_in_user, only: [:create, :destroy]
 
 	def new
 		@device = Device.new
@@ -20,8 +20,14 @@ class DevicesController < ApplicationController
 		end
 	end
 
-	#def destroy
-	#end
+	def destroy
+		@device = Device.find(params[:id])
+		if @device.present?
+			@device.destroy
+		end
+		flash[:success] = "Device removed from Inventory successfully"
+		redirect_to request.referrer || inventory_path
+	end
 
 	private
 
