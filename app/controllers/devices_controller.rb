@@ -1,12 +1,13 @@
 class DevicesController < ApplicationController
 
-	before_action :signed_in_user, only: [:create, :destroy]
+	before_action :signed_in_user, only: [:create, :destroy, :edit, :update]
 
 	def new
 		@device = Device.new
 	end
 
 	def show
+
 		@devices = Device.all
 	end
 
@@ -28,6 +29,23 @@ class DevicesController < ApplicationController
 		flash[:success] = "Device removed from Inventory successfully"
 		redirect_to request.referrer || inventory_path
 	end
+
+	def edit
+		@device = Device.find(params[:id])
+	end
+
+	def update
+		@device = Device.find(params[:id])
+		if @device.update_attributes(device_params)
+			# Handle a successful update
+		 	flash[:success] = "Device details updated"
+		 	redirect_to inventory_path
+		else
+			render 'edit'
+		end
+	end
+
+
 
 	private
 

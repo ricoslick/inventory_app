@@ -30,6 +30,7 @@
 					<td><%= device.serial %></td>
 					<td><%= device.created_at %></td>
 					<td><%= time_ago_in_words(device.created_at) %> old</td>
+					<td><%= link_to "Edit", edit_device_path(device), class: "btn btn-large btn-primary" %></td>
 					<% if current_user.admin? && !current_user?(@user)%>
 						<td><%= link_to "Remove Device", device, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-large btn-primary" %></td>
 					<% end %>
