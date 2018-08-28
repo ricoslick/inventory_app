@@ -1,0 +1,18 @@
+	<h2 id="aboutus"> Device Users List </h2>
+		<table class="table table-borderless">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Name</th>
+					<th scope="col">Department</th>
+				</tr>
+			</thead>		
+		<% (Customer.all).each do |customer| %>
+			<tbody>
+				<tr>
+					<th scope="row"><%= customer.name %></th>
+					<td><%= customer.department %></td>
+				</tr>
+			</tbody>
+		<% end %>
+		</table>
+

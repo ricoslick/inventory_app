@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 	resources :sessions, only: [:new, :create, :destroy]
 	resources :account_activations, only: [:edit]
 	resources :password_resets,		only: [:new, :create, :edit, :update] 
-	resources :devices,	only: [:create, :destroy, :edit, :update] # add edit later
+	resources :devices,	only: [:create, :destroy, :edit, :update] 
+	resources :customers, only: [:new, :create, :destroy] # add edit later
 
 	root to: 'static_pages#home', via:  :get
 

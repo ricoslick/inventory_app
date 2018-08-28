@@ -1,0 +1,16 @@
+<% provide(:title, @customer.name) %>
+<div class="row">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-6">
+	<h2 id="aboutus"> Device User Added! </h2>
+			<table class="table table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">Department</th>
+					</tr>
+				</thead>
+				<%= render @customer %>
+			</table>			
+	</div>
+</div>

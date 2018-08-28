@@ -4,6 +4,7 @@ class User < ApplicationRecord
 	has_secure_password
 	has_attached_file :avatar
 	has_many :devices
+	has_many :customers
 
 	attr_accessor :activation_digest
 	before_save { |user| user.email = email.downcase }

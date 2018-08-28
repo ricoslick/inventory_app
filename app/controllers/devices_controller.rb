@@ -7,7 +7,6 @@ class DevicesController < ApplicationController
 	end
 
 	def show
-
 		@devices = Device.all
 	end
 
