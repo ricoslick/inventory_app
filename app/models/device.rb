@@ -1,5 +1,7 @@
 class Device < ApplicationRecord
   belongs_to :user
+  belongs_to :customer
+  
   validates(:user_id, presence: true)
   validates(:category, presence: true)
   validates(:make, presence: true)

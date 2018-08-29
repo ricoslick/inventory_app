@@ -1,5 +1,5 @@
 <%= f.label :category, label_html: {maxlength: 15, size: 20} %>
-<%= f.select :category, options_for_select([[' ', 'default'], ['Laptop', 'laptop'], ['Desktop', 'desktop'],  ['Server', 'server'], ['Storage Device', 'disk'], ['UPS', 'ups'], ['Network Device', 'network'], ['Printer Toner', 'toner'], ['Phone Handset', 'phone'], ['Cellphone', 'cellphone'], ['Miscellaneous', 'other']] ) %>
+<%= f.select :category, options_for_select([[' ', ' '], ['Laptop', 'laptop'], ['Desktop', 'desktop'],  ['Server', 'server'], ['Storage Device', 'disk'], ['UPS', 'ups'], ['Network Device', 'network'], ['Printer Toner', 'toner'], ['Phone Handset', 'phone'], ['Cellphone', 'cellphone'], ['Miscellaneous', 'other']] ) %>
 
 <%= f.label :make, label_html: {maxlength: 15, size: 20} %>
 <%= f.text_field :make, text_field_html: {maxlength: 15, size: 20} %>
@@ -9,3 +9,6 @@
 
 <%= f.label :serial, label_html: {maxlength: 15, size: 20} %>
 <%= f.text_field :serial, text_field_html: {maxlength: 15, size: 20} %>
+
+<%= f.label :customer, label_html: {maxlength: 15, size: 20} %>
+<%= f.select :customer_id, options_from_collection_for_select(Customer.all, :id, :name) %>

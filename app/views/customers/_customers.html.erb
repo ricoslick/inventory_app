@@ -1,0 +1,22 @@
+<% provide(:title, 'All Device Users' %>
+<div class="row">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-8">
+		<table class="table table-borderless">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Name</th>
+					<th scope="col">Department</th>
+				</tr>
+			</thead>		
+		<% (Customer.all).each do |customer| %>
+			<tbody>
+				<tr>
+					<th scope="row"><%= customer.name %></th>
+					<td><%= customer.department %></td>
+				</tr>
+			</tbody>
+		<% end %>
+		</table>
+	</div>
+</div>

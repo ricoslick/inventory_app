@@ -23,6 +23,11 @@ class CustomersController < ApplicationController
 	def destroy
 	end
 
+	def index
+		@customers = Customer.all
+	end
+
+
 
 	private
 
