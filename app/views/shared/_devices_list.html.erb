@@ -15,6 +15,7 @@
 						<th scope="col">Type</th>
 						<th scope="col">Make</th>
 						<th scope="col">Model</th>
+						<th scope="col">Customer ID</th>
 						<th scope="col">Serial</th>
 						<th scope="col">Created at</th>
 						<th scope="col">Age</th>
@@ -27,6 +28,7 @@
 					<td><%= device.category %></td>
 					<td><%= device.make %></td>
 					<td><%= device.model %></td>
+					<td><%= device.customer_id %></td>
 					<td><%= device.serial %></td>
 					<td><%= device.created_at %></td>
 					<td><%= time_ago_in_words(device.created_at) %> old</td>
