@@ -72,6 +72,10 @@ h2 {
 	color: $blue;
 }
 
+.row-background-image {
+	background-image: url('paper-mache.jpg');
+}
+
 p {
 	font-size: 1.1em;
 	line-height: 1.7em;
@@ -122,6 +126,14 @@ p {
   justify-content: space-around;
 }
 
+.custom-toggler.navbar-toggler {
+	border-color: rgba($white, .4);
+}
+
+.navbar-toggler-icon{
+	background-image: $navbar-dark-toggler-icon-bg;
+}
+
 .btn-light{
 	font-weight: bold;
 }
@@ -130,12 +142,38 @@ p {
 .nav-link {
 	font-weight: bold;
 }
+
+.carousel-inner img{
+	
+}
+
+.carousel-control-prev{
+	color: $blue;
+}
+
+.carousel-control-next{
+	color: $blue;
+}
 /* footer */
 
 #footer {
 	p, h5, dt, dd{
 	color: white;
 	}
+}
+
+hr.light {
+	border-top: 1px solid $white;
+	width: 100%;
+	margin-top: .8rem;
+	margin-bottom: 1rem;
+}
+
+hr.light-100{
+	border-top: 1px solid $white;
+	width: 100%;
+	margin-top: .8rem;
+	margin-bottom: 1rem;
 }
 
 /* sidebar */

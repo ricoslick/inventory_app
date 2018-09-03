@@ -1,15 +1,17 @@
 <footer class="page-footer font-small pt-4 bg-primary" id="footer">
-	<div class="container-fluid text-center text-md-left">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-6 mt-md-0 mt-3"><a href="http://eapi.co.ke"><%= image_tag "EAPI_Logo.png" %></a>
+			<div class="col-md-4 mt-md-0 mt-3"><a href="http://eapi.co.ke"><%= image_tag "EAPI_Logo.png" %></a>
 				<p>Better by Design</p>
 			
 			</div>
 			<hr class="clearfix w-100 d-md-none pb-3">
 
 
-			<div class="col-md-3 mb-md-0 mb-3">
+			<div class="col-md-4 mt-md-0 mt-3">
+				<hr class="light">
 				<h5>Contacts</h5>
+				<hr class="light">
 				<dl class="contact-list">
 					<dt>Adress:</dt>
 					<dd>Kitui road, Off Kampala road, Nairobi</dd>
@@ -24,8 +26,10 @@
 				</dl>
 			</div>
 
-			<div class="col-md-3 mb-md-0 mb-3">
+			<div class="col-md-4 mt-md-0 mt-3">
+				<hr class="light">
 				<h5>Links</h5>
+				<hr class="light">
 				<nav>
 					<ul>
 						<li><%= link_to "About", about_path, id:"about" %></li>
@@ -34,9 +38,12 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="footer-copyright text-center py-3">© 2018 Copyright:
-	           <a href="http://eapi.co.ke">EAPI</a>
-	        </div>
+			<div class="col-12">
+				<hr class="light-100">
+				<div class="footer-copyright py-3">&copy; 2018 Copyright:
+		           <a href="http://eapi.co.ke">EAPI</a>
+		        </div>
+	    	</div>
 		</div>
 	</div>
 </footer>
