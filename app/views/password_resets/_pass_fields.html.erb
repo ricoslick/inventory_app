@@ -1,7 +1,7 @@
 <%= hidden_field_tag :email, @user.email %>
 
 <%= f.label :password, label_html: {maxlength: 15, size: 20} %>
-<%= f.password_field :password, password_field_html: {maxlength: 25, size: 20} %>
+<%= f.password_field :password, password_field_html: {maxlength: 25, size: 20}, placeholder: "Enter New Password" %>
 
 <%= f.label :password_confirmation, label_field_html: {maxlength: 15, size: 20} %>
-<%= f.password_field :password_confirmation, password_field_html: {maxlength: 25, size: 20} %>
+<%= f.password_field :password_confirmation, password_field_html: {maxlength: 25, size: 20}, placeholder: "Confirm New Password" %>
