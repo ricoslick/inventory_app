@@ -2,6 +2,7 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
+
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
 $blue: #003eff;
@@ -18,6 +19,7 @@ overflow-y: scroll;
 }
 body {
 padding-top: 60px;
+font-family: 'Muli', sans-serif;
 }
 section {
 overflow: auto;
@@ -40,6 +42,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1;
+	font-family: 'Muli', sans-serif;
 }
 
 h1 {
