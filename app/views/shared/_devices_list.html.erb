@@ -3,7 +3,12 @@
 <% if signed_in? %>
 	<div class="col-sm-3"></div>
 <% else %>
-	<div class="col-sm-3"><%= image_tag 'see_no_evil.png' %></div>
+	<div class="col-sm-3">
+		<figure class="figure">
+			<%= image_tag 'see_no_evil.gif' %>
+			<figcaption class="figure-caption">&copy; Yolanda Araujo</figcaption>
+		</figure>
+		</div>
 <% end %>
 	<div class="col-sm-8">
 		<% if signed_in? %>
