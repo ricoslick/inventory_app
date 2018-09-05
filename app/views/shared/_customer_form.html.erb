@@ -1,5 +1,5 @@
 <%= f.label :name, label_html: {maxlength: 15, size: 20} %>
-<%= f.text_field :name, text_field_html: {maxlength: 15, size: 20} %>
+<%= f.text_field :name, text_field_html: {maxlength: 15, size: 20}, placeholder: "Enter Name" %>
 
 <%= f.label :department, label_html: {maxlength: 15, size: 20} %>
-<%= f.select :department, options_for_select([[' ', ' '], ['Information Technology', 'IT'], ['Human Resources', 'HR'],  ['Sales', 'sales'], ['Accounts & Finance', 'accounts'], ['Production', 'production'], ['Customer care', 'customer care'], ['Procurement & Supplies', 'procurement'], ['Engineering', 'engineering'], ['Administration', 'administration'], ['Miscellanous', 'other']] ) %>
+<%= f.select :department, options_for_select([[' ', ' '], ['Information Technology', 'IT'], ['Human Resources', 'HR'],  ['Sales', 'sales'], ['Accounts & Finance', 'accounts'], ['Production', 'production'], ['Customer care', 'customer care'], ['Procurement & Supplies', 'procurement'], ['Engineering', 'engineering'], ['Administration', 'administration'], ['Miscellanous', 'other']] ), placeholder: "Select Department" %>
