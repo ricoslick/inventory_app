@@ -9,7 +9,7 @@
 	<div class="col-sm-5">
 		<ul class="list-group">
 			<li class="list-group-item">
-				<%= form_for(:session, url: sessions_path) do |f| %> 
+				<%= form_for(:session, url: sessions_path ) do |f| %> 
 					<% if flash[:notice] %>
     					<div class="notice"><%= flash[:notice] %></div>
  					<% end %>

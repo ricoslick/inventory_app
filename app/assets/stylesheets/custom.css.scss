@@ -299,6 +299,55 @@ input, textarea, select, .uneditable-input {
 	color: $blue;
 }
 
+/* form */
+.session-form::before {
+	font-family: 'Font Awesome\ 5 Free';
+	content: "\f0e0";
+	position: absolute;
+	font-size: 22px;
+	color: $gray-500;
+	left: 28px;
+	padding-top: 4px;
+}
+
+.session-form:last-of-type::before{
+	content: "\f023";
+	font-weight: 900;
+}
+
+.pass-form::before{
+	font-family: 'Font Awesome\ 5 Free';
+	content: "\f0e0";
+	position: absolute;
+	font-size: 22px;
+	color: $gray-500;
+	left: 28px;
+	padding-top: 4px;
+}
+
+.reset-form::before{
+	font-family: 'Font Awesome\ 5 Free';
+	content: "\f023";
+	font-weight: 900;
+	position: absolute;
+	font-size: 22px;
+	color: $gray-500;
+	left: 28px;
+	padding-top: 4px;
+}
+
+.form-text {
+	text-indent: 48px;
+}
+
+.form-pass {
+	text-indent: 48px;
+}
+
+.pass-reset{
+	text-indent: 48px;
+}
+
 /* tables */
 .table{
 
