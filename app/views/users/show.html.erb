@@ -25,6 +25,19 @@
 	<div class="col-sm-8">
 		<% if @user.devices.any? %>
 			<h2 id="aboutus"> Device Inventory List for <%= @user.name %></h2>
+				<%= form_tag current_user, class: 'card card-sm', method: :get do %>
+					<div class="card-body row no-gutters align-items-center">
+						<div class="col-auto">
+							<%= icon('fas', 'search', class: 'strong h5 search-ico') %>
+						</div>
+						<div class="col">
+							<%= text_field_tag :query, params[:query], class: 'form-control form-control-sm form-control-borderless', placeholder: "Find ..." %>
+						</div>
+						<div class="col-auto">
+							<%= submit_tag "Search", class: 'btn btn-primary btn-sm search-buttn' %>
+						</div>
+					</div>					
+				<% end %>
 			<table class="table table-striped">
 				<thead class="thead-dark">
 					<tr>

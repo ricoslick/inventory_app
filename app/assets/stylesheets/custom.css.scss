@@ -348,9 +348,34 @@ input, textarea, select, .uneditable-input {
 	text-indent: 48px;
 }
 
+
 .pass-reset{
 	text-indent: 48px;
 }
+
+/* search-form */
+.search-ico {
+	padding-right: 8px;
+}
+
+.search-buttn {
+	padding-left: 6px;
+}
+
+.card {
+	border: 0;
+}
+
+/* pagination */
+
+
+.pagination li {
+	background-color: $gray-600;
+	&:hover{
+		background-color: $gray-500;
+	}
+}
+
 
 /* tables */
 .table{

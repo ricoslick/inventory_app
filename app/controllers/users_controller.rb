@@ -11,6 +11,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @devices = @user.devices.paginate(page: params[:page], per_page: 5)
     @customers = @user.customers.paginate(page: params[:page], per_page: 4)
+    # @devicess = @user.devices.text_search(params[:query]).page(params[:page]).per_page(5)
+
+    if params[:query].present?
+      @devices = @user.devices.search(params[:query]).paginate(page: params[:page], per_page: 5)
+      render 'show'
+    else
+      @devices =  @user.devices.paginate(page: params[:page], per_page: 5)
+    end
   end
 
 
@@ -54,7 +62,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-	 params.require(:user).permit(:name, :email, :department, :password, :password_confirmation, :avatar)
+	 params.require(:user).permit(:name, :email, :department, :password, :password_confirmation, :avatar, :query)
   end
 
   def correct_user

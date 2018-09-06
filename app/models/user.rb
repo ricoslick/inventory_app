@@ -1,5 +1,10 @@
 class User < ApplicationRecord
 	include ActiveModel::ForbiddenAttributesProtection
+	include PgSearch
+
+	pg_search_scope :search, against: [:name],
+		using: {tsearch: {any_word: true} },
+		associated_against: {devices: [:category, :make, :model, :serial]}
 
 	has_secure_password
 	has_attached_file :avatar
@@ -45,6 +50,11 @@ class User < ApplicationRecord
 	def password_reset_expired?
 	   reset_sent_at < 2.hours.ago
 	end
+
+	def self.search(query)
+		where("name LIKE ?", "%#{query}%") 
+	end
+
 
 	private
 

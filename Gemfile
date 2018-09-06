@@ -15,6 +15,7 @@ gem 'bootstrap-will_paginate'
 gem 'autoprefixer-rails', '9.0.0'
 gem 'paperclip'
 gem 'font-awesome-sass', '~> 5.3.1'
+gem 'pg_search'
 
 
 # Use sqlite3 as the database for Active Record
