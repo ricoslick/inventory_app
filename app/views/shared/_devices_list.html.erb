@@ -24,6 +24,8 @@
 						<th scope="col">Serial</th>
 						<th scope="col">Created at</th>
 						<th scope="col">Age</th>
+						<th scope="col">Edit</th>
+						<th scope="col">Remove</th>
 					</tr>
 				</thead>
 			<% (Device.all).each do |device| %>
@@ -37,9 +39,9 @@
 					<td><%= device.serial %></td>
 					<td><%= device.created_at %></td>
 					<td><%= time_ago_in_words(device.created_at) %> old</td>
-					<td><%= link_to "Edit", edit_device_path(device), class: "btn btn-large btn-primary" %></td>
+					<td><%= link_to edit_device_path(device) do %><%= icon('fas', 'pencil-alt', class: 'strong h6 trash-ico float-right') %><% end %></td>
 					<% if current_user.admin? && !current_user?(@user)%>
-						<td><%= link_to "Remove Device", device, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-large btn-primary" %></td>
+						<td><%= link_to device_path(device), method: :delete, data: {confirm: "Are you sure?"} do %><%= icon('fas', 'trash', class: 'strong h6 trash-ico float-right') %><% end %></td>
 					<% end %>
 				</tr>
 			</tbody>
