@@ -20,12 +20,14 @@
 						<th scope="col">Type</th>
 						<th scope="col">Make</th>
 						<th scope="col">Model</th>
-						<th scope="col">Customer ID</th>
+						<th scope="col">Device User</th>
 						<th scope="col">Serial</th>
 						<th scope="col">Created at</th>
 						<th scope="col">Age</th>
 						<th scope="col">Edit</th>
-						<th scope="col">Remove</th>
+						<% if current_user.admin? && !current_user?(@user)%>
+							<th scope="col">Remove</th>
+						<% end %>
 					</tr>
 				</thead>
 			<% (Device.all).each do |device| %>
@@ -35,7 +37,7 @@
 					<td><%= device.category %></td>
 					<td><%= device.make %></td>
 					<td><%= device.model %></td>
-					<td><%= device.customer_id %></td>
+					<td><%= device.customer.name %></td>
 					<td><%= device.serial %></td>
 					<td><%= device.created_at %></td>
 					<td><%= time_ago_in_words(device.created_at) %> old</td>
