@@ -1,5 +1,5 @@
 <% if params[:query].present? %>
 	<div class="alert alert-info">
-		<%= @devices.count %> devices found.
+		<%= pluralize(@devices.count, "device") %> found.
 	</div>
 <% end %>

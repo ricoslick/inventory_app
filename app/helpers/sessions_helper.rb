@@ -34,4 +34,18 @@ module SessionsHelper
 	def store_location
 		session[:return_to] = request.fullpath
 	end
+
+	def session_expires
+		t = Time.now
+		@time_left = (session[:expires_at] = t + 1.minute).to_i - (Time.now).to_i
+		unless @time_left > 0.seconds.to_i
+			reset_session
+			flash[:info] = 'Session Expired. Please login again to continue'
+			redirect_to signin_path
+		end
+	end
+
+	def update_session_time
+		session[:expires_at] = Time.now + 600.seconds
+	end
 end

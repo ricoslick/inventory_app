@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:index, :edit, :update]
+  before_action :signed_in_user, only: [:index, :edit, :update, :show]
   before_action :correct_user,  only: [:edit, :update]
   before_action :admin_user,    only: :destroy
+  before_action :session_expires, except: [:signin, :signout]
+  # before_action :update_session_time, except: [:login, :logout]
   
   def new
   	@user = User.new
