@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
+  require 'csv'
   before_action :signed_in_user, only: [:index, :edit, :update, :show]
   before_action :correct_user,  only: [:edit, :update]
   before_action :admin_user,    only: :destroy
-  before_action :session_expires, except: [:signin, :signout]
-  # before_action :update_session_time, except: [:login, :logout]
+  before_action :session_expires, except: [:login, :logout]
+  before_action :update_session_time, except: [:login, :logout]
   
   def new
   	@user = User.new
@@ -52,6 +53,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all 
+    respond_to do |format|
+      format.html
+      format.csv { send_data @users.to_csv}
+    end
   end
 
   def destroy

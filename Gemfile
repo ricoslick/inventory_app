@@ -17,7 +17,6 @@ gem 'paperclip'
 gem 'font-awesome-sass', '~> 5.3.1'
 gem 'pg_search'
 
-
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 group :development, :test do
