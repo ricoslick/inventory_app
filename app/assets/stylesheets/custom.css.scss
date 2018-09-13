@@ -11,6 +11,7 @@
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
 $blue: #003eff;
+$breadcrumb-divider: quote("|");
 
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
@@ -384,6 +385,24 @@ input, textarea, select, .uneditable-input {
 	&:hover{
 		background-color: $gray-500;
 	}
+}
+
+/* reporting */
+.file-ico {
+	color: $blue;
+	padding-top: 2px;
+	padding-right: 4px;
+	&:hover {
+		text-decoration: none;
+		color: $blue;
+	}
+
+}
+
+.filetypes {
+	font-weight: bold;
+	text-align: center;
+	color: $gray-500;
 }
 
 

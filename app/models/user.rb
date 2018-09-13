@@ -55,11 +55,11 @@ class User < ApplicationRecord
 		where("name LIKE ?", "%#{query}%") 
 	end
 
-	def self.to_csv
-		CSV.generate do |csv|
-			csv << column_names
+	def self.to_csv(options= {})
+		CSV.generate(options) do |csv|
+			csv << ["Name", "Email", "Department"]
 			all.each do |user|
-				csv << user.attributes.values_at(*column_names)
+				csv << [user.name, user.email, user.department]
 			end
 		end
 	end

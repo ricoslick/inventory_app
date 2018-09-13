@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   require 'csv'
+  require 'prawn'
+  require 'prawn/table'
+  
   before_action :signed_in_user, only: [:index, :edit, :update, :show]
   before_action :correct_user,  only: [:edit, :update]
   before_action :admin_user,    only: :destroy
@@ -53,10 +56,8 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all 
-    respond_to do |format|
-      format.html
-      format.csv { send_data @users.to_csv}
-    end
+    prints_pdf
+    
   end
 
   def destroy
