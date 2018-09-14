@@ -12,4 +12,13 @@ class Device < ApplicationRecord
 	def self.search(query)
 		where("model || make || category ILIKE ?", "%#{query}%")
 	end
+
+  def self.to_csv(options= {})
+    CSV.generate(options) do |csv|
+      csv << ["Added_By", "Type", "Make", "Model", "Device Custodian", "Serial No.", "Date Created"]
+      all.each do |device|
+        csv << [device.user.name, device.category, device.make, device.model, device.customer.name, device.serial, device.created_at ]
+      end
+    end
+  end
 end

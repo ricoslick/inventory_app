@@ -1,7 +1,20 @@
 <% provide(:title, 'Inventory List') %>
 <div class="row">
 <% if signed_in? %>
-	<div class="col-sm-3"></div>
+	<div class="col-sm-3">
+		<div class="card" style="width: 18rem;">
+			<%= image_tag 'save-ico.png', class: 'card-image-top', alt: 'Download Icon' %>
+			<div class="card-body">
+				<h5 class="card-title filetypes">Download As:</h5>
+				<ol class="breadcrumb">
+					<li><%= icon('fas', 'file-download', class: 'strong h6 file-ico float-left', title: 'Save As') %></li>
+					<li class="breadcrumb-item active"><%= link_to " PDF ", devices_path(format: "pdf"), id: "admin_field" %></li>
+					<li class="breadcrumb-item"><%= link_to "  Excel File ", devices_path(format: "xls"), id: "admin_field" %></li>
+					<li class="breadcrumb-item"><%= link_to ' .xlsx ', devices_path(format: :xlsx), id: "admin_field" %></li>
+				</ol>
+			</div>
+		</div>
+	</div>
 <% else %>
 	<div class="col-sm-3">
 		<figure class="figure">

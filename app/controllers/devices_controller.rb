@@ -1,13 +1,19 @@
 class DevicesController < ApplicationController
+	require 'csv'
+  	require 'prawn'
+  	require 'prawn/table'
 
 	before_action :signed_in_user, only: [:create, :destroy, :edit, :update]
 
 	def new
 		@device = Device.new
+		@devices = Device.all
+		pdf_printer
 	end
 
 	def show
 		@devices = Device.all
+		# pdf_printer
 	end
 
 	def create
@@ -29,6 +35,11 @@ class DevicesController < ApplicationController
 		redirect_to request.referrer || inventory_path
 	end
 
+	def index
+		@devices = Device.all
+		pdf_printer
+	end
+
 	def edit
 		@device = Device.find(params[:id])
 	end
@@ -43,6 +54,7 @@ class DevicesController < ApplicationController
 			render 'edit'
 		end
 	end
+
 
 
 

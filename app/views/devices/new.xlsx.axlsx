@@ -1,0 +1,6 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Inventory List") do |sheet|
+	@devices.each do |device|
+		sheet.add_row [device.user.name, device.category, device.make, device.model, device.customer.name, device.serial, device.created_at]
+	end
+end
