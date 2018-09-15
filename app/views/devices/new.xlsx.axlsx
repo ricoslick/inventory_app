@@ -1,6 +1,11 @@
 wb = xlsx_package.workbook
-wb.add_worksheet(name: "Inventory List") do |sheet|
-	@devices.each do |device|
-		sheet.add_row [device.user.name, device.category, device.make, device.model, device.customer.name, device.serial, device.created_at]
+wb.styles do |style|
+	highlight_row = style.add_style(bg_color: "008000", fg_color: "FFFFFF", b: true )
+
+	wb.add_worksheet(name: "Inventory List") do |sheet|
+		sheet.add_row ['Name', 'Type', 'Make', 'Model', 'Device User', 'Serial No.', 'Created at'], style: [highlight_row, highlight_row, highlight_row, highlight_row, highlight_row, highlight_row, highlight_row]
+		@devices.each do |device|
+			sheet.add_row [device.user.name, device.category, device.make, device.model, device.customer.name, device.serial, device.created_at]
+		end
 	end
 end

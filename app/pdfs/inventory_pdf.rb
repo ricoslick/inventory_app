@@ -34,6 +34,8 @@ class InventoryPdf < Prawn::Document
 			self.header = true
 
 			self.row_colors = ['DDDDDD', 'FFFFFF']
+
+			self.cell_style = {:size => 9}
 		end
 	end
 

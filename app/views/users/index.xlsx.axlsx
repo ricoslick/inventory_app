@@ -1,6 +1,12 @@
 wb = xlsx_package.workbook
-wb.add_worksheet(name: "Inventory Managers") do |sheet|
-	@users.each do |user|
-		sheet.add_row [user.name, user.email, user.department]
+	
+wb.styles do |style|
+	highlight_row = style.add_style(bg_color: "008000", fg_color: "FFFFFF", b: true )
+	
+	wb.add_worksheet(name: "Inventory Managers") do |sheet|
+		sheet.add_row ['Name', 'Email', 'Dept.'], style: [ highlight_row, highlight_row, highlight_row ]
+		@users.each do |user|
+			sheet.add_row [user.name, user.email, user.department]
+		end
 	end
 end
