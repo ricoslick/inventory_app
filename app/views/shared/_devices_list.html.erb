@@ -47,7 +47,7 @@
 				<% (Device.all).each do |device| %>
 					<tbody>
 					<tr>
-						<th scope="row"><%= link_to device.user.name, device.user, id:"signup" %></th>
+						<th scope="row"><%= device.user.name  %></th>
 						<td><%= device.category %></td>
 						<td><%= device.make %></td>
 						<td><%= device.model %></td>

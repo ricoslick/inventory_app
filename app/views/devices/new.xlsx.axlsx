@@ -4,6 +4,11 @@ wb.styles do |style|
 
 	wb.add_worksheet(name: "Inventory List") do |sheet|
 		sheet.add_row ['Name', 'Type', 'Make', 'Model', 'Device User', 'Serial No.', 'Created at'], style: [highlight_row, highlight_row, highlight_row, highlight_row, highlight_row, highlight_row, highlight_row]
+		sheet.sheet_view.pane do |pane|
+			pane.state = :frozen
+			pane.x_split = 1
+			pane.y_split = 1
+		end
 		@devices.each do |device|
 			sheet.add_row [device.user.name, device.category, device.make, device.model, device.customer.name, device.serial, device.created_at]
 		end

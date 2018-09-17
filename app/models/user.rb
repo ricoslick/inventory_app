@@ -57,13 +57,13 @@ class User < ApplicationRecord
 
 	def self.to_csv(options= {})
 		CSV.generate(options) do |csv|
-			csv << ["Name", "Email", "Department"]
+			csv << ["Name", "Email", "Department" ]
 			all.each do |user|
 				csv << [user.name, user.email, user.department]
 			end
 		end
 	end
-
+	
 
 	private
 
