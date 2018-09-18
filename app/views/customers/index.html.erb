@@ -2,6 +2,22 @@
 <div class="row">
 	<div class="col-sm-3"></div>
 	<div class="col-sm-6">
-		<%= render 'customers_list' %>			
+		<%= form_tag @customer, class: 'card card-sm', method: :get do %>
+					<%= render 'shared/search_customer'%>
+					<div class="card-body row no-gutters align-items-center">
+						<div class="col-auto">
+							<%= icon('fas', 'search', class: 'strong h5 search-ico') %>
+						</div>
+						<div class="col">
+							<%= text_field_tag :query, params[:query], class: 'form-control form-control-sm form-control-borderless', placeholder: "Find ..." %>
+						</div>
+						<div class="col-auto">
+							<%= submit_tag "Search", class: 'btn btn-primary btn-sm search-buttn' %>
+						</div>
+					</div>					
+				<% end %>
+		<%= render 'customers_list' %>	
+		<%= will_paginate @customers, id: "signup", class:"pagination pagination-bg" %>		
 	</div>
+
 </div>

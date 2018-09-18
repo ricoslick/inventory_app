@@ -8,10 +8,12 @@
 					<tr>
 						<th scope="col">Name</th>
 						<th scope="col">Department</th>
+						<th scope="col">Edit</th>
 					</tr>
 				</thead>
 				<%= render @customer %>
 			</table>
-			<%= render 'customers_list' %>			
+			<%= render 'customers_list' %>	
+			<%= will_paginate @customers, id: "signup", class:"pagination pagination-bg" %>		
 	</div>
 </div>

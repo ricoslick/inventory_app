@@ -2,6 +2,7 @@
 	<tr>
 		<th scope="row"><%= @customer.name %></th>
 		<td><%= @customer.department %></td>
+		<td><%= link_to edit_customer_path(customer) do %><%= icon('fas', 'pencil-alt', class: 'strong h6 trash-ico float-right') %><% end %></td>
 	</tr>
 </tbody>
 
