@@ -381,11 +381,62 @@ input, textarea, select, .uneditable-input {
 
 
 .pagination li {
-	background-color: $gray-600;
+	background-color: $white;
 	&:hover{
 		background-color: $gray-500;
 	}
 }
+
+.pagination .active {
+		background-color: $gray-400;
+	}
+
+.block_pagination {
+  background: white;
+  cursor: default;
+  /* self-clearing method: */ }
+  .block_pagination a, .block_pagination span, .block_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .block_pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .block_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1; }
+  .block_pagination a {
+    text-decoration: none;
+    color: $blue;
+    border: 1px solid #9aafe5; }
+    .block_pagination a:hover, .block_pagination a:focus {
+      color: #000033;
+      border-color: #000033; }
+  .block_pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .block_pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .block_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .block_pagination {
+    height: 1%; }
+  *:first-child + html .block_pagination {
+    overflow: hidden; }
 
 /* reporting */
 .file-ico {

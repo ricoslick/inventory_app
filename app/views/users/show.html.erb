@@ -54,7 +54,12 @@
 				</thead>
 				<%= render @devices %>
 			</table>
-			<%= will_paginate @devices, id: "signup", class:"pagination pagination-bg" %>
+			<div class="block_pagination">
+				<div class="page_info">
+					<%= page_entries_info @devices %>
+				</div>	
+				<%= will_paginate @devices, id: "signup", class:"pagination pagination-bg" %>
+			</div>
 		<% end %> 
 	</div>
 </div>
