@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   include UsersHelper
   include DevicesHelper
 
+  rescue_from ActionController::InvalidAuthenticityToken do |exception|
+    sign_out_user 
+  end
+
   private
 
   	# confirm a logged-in user
