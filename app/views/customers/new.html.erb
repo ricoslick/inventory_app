@@ -19,4 +19,19 @@
 			</ul>
 		</div>
 	</div>
+<% else %>
+	<div class="row">
+		<div class="col-sm-3">
+			<figure class="figure">
+				<%= image_tag 'sad.gif' %>
+				<figcaption class="figure-caption">&copy; Photo Bucket</figcaption>
+			</figure>
+		</div>
+		<div class="col-sm-7">
+			<div class="jumbotron jumbotron-fluid">	
+					<h1>Saddened to inform you that:</h1>
+					<p id="account">To view this you must login here: <%= link_to "Log in", signin_path, id:"signup" %></p>
+			</div>
+		</div>
+	</div>	
 <% end %>
