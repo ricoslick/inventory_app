@@ -3,7 +3,7 @@
 	<div class="col-sm-3"></div>
 	<div class="col-sm-6">
 		<%= form_tag @customer, class: 'card card-sm', method: :get do %>
-					<%= render 'shared/search_customer'%>
+					
 					<div class="card-body row no-gutters align-items-center">
 						<div class="col-auto">
 							<%= icon('fas', 'search', class: 'strong h5 search-ico') %>
@@ -14,7 +14,8 @@
 						<div class="col-auto">
 							<%= submit_tag "Search", class: 'btn btn-primary btn-sm search-buttn' %>
 						</div>
-					</div>					
+					</div>	
+					<%= render 'shared/search_customer'%>				
 				<% end %>
 		<%= render 'customers_list' %>
 		<div class="block_pagination">
