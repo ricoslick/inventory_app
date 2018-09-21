@@ -1,7 +1,7 @@
 module SessionsHelper
 
 	def sign_in(user)
-		cookies.permanent[:remember_token] = user.remember_token
+		cookies[:remember_token] = { value: user.remember_token, expires: 2.hours.from_now }
 		self.current_user = user
 	end
 
@@ -36,8 +36,8 @@ module SessionsHelper
 	end
 
 	def session_expires
-		t = Time.now
-		@time_left = (session[:expires_at] = t + 1.minute).to_i - (Time.now).to_i
+		t = Time.current
+		@time_left = (session[:expires_at] = t + 10.minutes).to_i - (Time.current).to_i
 		unless @time_left > 0.seconds.to_i
 			reset_session
 			flash[:info] = 'Session Expired. Please login again to continue'

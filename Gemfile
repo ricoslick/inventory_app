@@ -18,8 +18,9 @@ gem 'font-awesome-sass', '~> 5.3.1'
 gem 'pg_search'
 gem 'prawn'
 gem 'axlsx_rails'
-gem 'axlsx','~> 2.0.1'
-gem 'zip-zip'
+# gem 'axlsx','~> 2.0.1'
+gem 'axlsx', '~> 3.0.0.pre'
+gem 'rubyzip'
 gem 'prawn-table'
 
 # Use sqlite3 as the database for Active Record
