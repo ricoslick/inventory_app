@@ -13,7 +13,34 @@
 				</thead>
 				<%= render @customer %>
 			</table>
-			<%= render 'customers_list' %>	
-			<%= will_paginate @customers, id: "signup", class:"pagination pagination-bg" %>		
+			<table class="table table-striped">
+				<button class="btn btn-large btn-primary" data-toggle="modal" data-target="#customerModal">View All</button>
+				<!-- Modal -->
+								<div class="modal fade" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModal" aria-hidden="true">
+								  <div class="modal-dialog modal-lg" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <h5 class="modal-title" id="roles">Device Users</h5>
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          <span aria-hidden="true">&times;</span>
+								        </button>
+								      </div>
+								      <div class="modal-body">	
+											<% (Customer.all).each do |customer| %>
+												<ul>
+													<li><%= customer.name %></li>
+													<li><%= customer.department %></li>
+													<li><%= link_to edit_customer_path(customer) do %><%= icon('fas', 'pencil-alt', class: 'strong h6 trash-ico float-right') %><% end %></li>
+												</ul>
+											<% end %>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								      </div>
+								    </div>
+								  </div>
+								</div>
+			</table>
+
 	</div>
 </div>
