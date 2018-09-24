@@ -14,7 +14,7 @@ class CustomersController < ApplicationController
 	def create
 		@customer = current_user.customers.build(customer_params)
 		if @customer.save
-			flash[:success] = "Device User added!"
+			flash.now[:success] = "Device User added!"
 			render 'show'
 		else
 			render 'new'

@@ -19,7 +19,7 @@ class DevicesController < ApplicationController
 	def create
 		@device = current_user.devices.build(device_params)
 		if @device.save
-			flash[:success] = "Device added to Inventory List"
+			flash.now[:success] = "Device added to Inventory List"
 			render 'show'
 		else
 			render 'new'
