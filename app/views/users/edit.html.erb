@@ -10,9 +10,11 @@
 		<ul class="list-group">
 			<li class="list-group-item">
 				<%= form_for(@user) do |f| %> 
+				<div class="form-group">
 					<%= f.file_field :avatar%>
 					<%= render 'fields', f: f %>
 					<%= f.submit "Save Changes", class: "btn btn-large btn-primary" %>
+				</div>
 				<% end %>
 			</li>
 		</ul>

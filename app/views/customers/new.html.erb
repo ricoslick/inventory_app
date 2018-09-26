@@ -11,9 +11,11 @@
 			<ul class="list-group">
 				<li class="list-group-item">
 					<%= form_for(@customer) do |f| %> 
+					<div class="form-group">
 						<%= render 'shared/customer_errors' %>
 						<%= render 'shared/customer_form', f: f %>
 					<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+					</div>
 					<% end %>
 				</li>
 			</ul>

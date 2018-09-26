@@ -81,7 +81,6 @@ h2 {
 }
 
 #aboutus {
-	font-weight: bold;
 	color: $blue;
 }
 
@@ -92,7 +91,24 @@ h2 {
 }
 
 .row-background-image {
-	background-image: url('paper-mache.jpg');
+	//background-image: url('paper-mache.jpg');background-image: url('grey-texture.jpg');
+	background-image: url('grey-texture.jpg');
+	align: center;
+}
+
+.row-background-image h2 {
+		border-bottom: 2px solid #b4b4b4;
+}
+
+.fun {
+	border: none;
+}
+
+.bout h2 {
+	border-bottom: 5px;
+	width: 95%;
+	margin-top: .3rem;
+	margin-bottom: 1rem;
 }
 
 .carousel-indicators li {
@@ -116,6 +132,10 @@ p {
 	font-weight: bold;
 }
 
+.home {
+	background-color: $gray-200;
+	padding: 1rem;
+}
 
 /* header */
 
@@ -170,8 +190,7 @@ p {
 	font-weight: bold;
 }
 
-.carousel-inner img{
-	
+.imgabout{
 }
 
 .carousel-control-prev{
@@ -311,6 +330,18 @@ input, textarea, select, .uneditable-input {
 }
 
 /* form */
+
+.form-group {
+	margin-bottom: 25px;
+}
+
+.form-group input {
+	height: 42px;
+	border-radius: 5px;
+	border: auto;
+	padding-left: 54px;
+}
+
 .session-form::before {
 	font-family: 'Font Awesome\ 5 Free';
 	content: "\f0e0";

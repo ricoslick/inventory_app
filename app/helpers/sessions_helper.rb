@@ -37,9 +37,9 @@ module SessionsHelper
 	end
 
 	def session_expires
-		t = Time.current
-		@time_left = (session[:expires_at] = t + 10.minutes).to_i - (Time.current).to_i
-		unless @time_left > 0.seconds.to_i
+		t = 3.minutes.from_now
+		session[:last_seen] = Time.now
+		if session[:last_seen] > t
 			reset_session
 			flash[:info] = 'Session Expired. Please login again to continue'
 			redirect_to signin_path

@@ -10,12 +10,14 @@
 		<ul class="list-group">
 			<li class="list-group-item">
 				<%= form_for(@user, url: password_reset_path(params[:id])) do |f| %> 
+				<div class="form-group">
 					<% if flash[:info] %>
     					<div class="notice"><%= flash[:info] %></div>
  					<% end %>
 					<%= render 'shared/error_messages' %>
 					<%= render 'pass_fields', f: f %>
 				<%= f.submit "Update Password", class: "btn btn-large btn-primary" %>
+				</div>
 				<% end %>
 			</li>
 		</ul>
