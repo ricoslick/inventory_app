@@ -3,6 +3,7 @@
 	<div class="row">
 	<% if signed_in? %>
 		<div class="col-sm-3">
+			<br>
 			<div class="card" style="width: 18rem;">
 				<%= image_tag 'save-ico.png', class: 'card-image-top', alt: 'Download Icon' %>
 				<div class="card-body">
@@ -26,6 +27,7 @@
 	<% end %>
 		<div class="col-sm-7">
 			<% if signed_in? %>
+			<br><br>
 				<h2 id="aboutus">Complete Device Inventory List </h2>
 				<table class="table table-striped">
 					<thead class="thead-dark">
