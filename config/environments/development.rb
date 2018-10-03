@@ -36,9 +36,9 @@ Rails.application.configure do
     address:           'mail.riseup.net',
     port:              '587',
     authentication:    :plain,
-    user_name:         'bantuefwe',
-    password:          '$Wesakula*1588#',
-    domain:            'riseup.net',
+    user_name:         ENV['RISEUP_USERNAME'],
+    password:          ENV['RISEUP_PASSWORD'],
+    domain:            ENV['RISEUP_DOMAIN'],
     enable_starttls_auto: true
   }
   
