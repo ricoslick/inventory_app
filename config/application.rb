@@ -10,6 +10,13 @@ Bundler.require(*Rails.groups)
 module InventoryApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+
+    config.before_configuration do
+	  env_file = File.join(Rails.root, 'config', 'local_env.yml')
+	  YAML.load(File.open(env_file)).each do |key, value|
+	    ENV[key.to_s] = value
+	  end if File.exists?(env_file)
+	end
     config.load_defaults 5.1
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -17,3 +24,4 @@ module InventoryApp
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+# Environmental variable db config

@@ -8,8 +8,8 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  username: postgres
-  password: Badui$M@1997
+  username: <%= ENV['INVENTORY_DB_USER'] %>
+  password: <%= ENV['INVENTORY_DB_PASSWORD'] %>
 
 development:
   <<: *default
