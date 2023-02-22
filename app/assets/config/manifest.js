@@ -1,3 +1,31 @@
 //= link_tree ../images
 //= link_directory ../javascripts .js
 //= link_directory ../stylesheets .css
+//= link_directory ../stylesheets/map .map
+//= link bootstrap.css
+//= link bootstrap.css.map
+//= link bootstrap.min.css
+//= link bootstrap.min.css.map
+//= link customers.css
+//= link devices.css
+//= link account_activations.css
+//= link password_resets.css
+//= link sessions.css
+//= link static_pages.css
+//= link users.js
+//= link jquery.js
+//= link bootstrap.js
+//= link back-to-top.js
+//= link bootstrap.min.js
+//= link bootstrap-confirmation.js
+//= link customers.js
+//= link cable.js
+//= link devices.js
+//= link account_activations.js
+//= link password_resets.js
+//= link popper.min.js
+//= link sessions.js
+//= link static_pages.js
+//= link users.js
+
+

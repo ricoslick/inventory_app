@@ -7,49 +7,49 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.3'
-gem 'bootstrap', '4.1.3'
+gem 'sassc-rails'
+gem 'rails', '~> 7.0.4'
+gem 'bootstrap'
 gem 'bcrypt'
-gem 'will_paginate', '3.1.6'
+gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'autoprefixer-rails', '9.0.0'
+gem 'autoprefixer-rails', '~> 8.6.5'
 gem 'paperclip'
-gem 'font-awesome-sass', '~> 5.3.1'
+gem 'mimemagic', '~> 0.4.3'
+gem 'font-awesome-sass', '~> 6.2.1'
 gem 'pg_search'
 gem 'prawn'
 gem 'axlsx_rails'
 # gem 'axlsx','~> 2.0.1'
-gem 'axlsx', '~> 3.0.0.pre'
+gem 'axlsx'
 gem 'rubyzip'
 gem 'prawn-table'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 group :development, :test do
-	gem 'pg', '~> 0.21.0'
+	gem 'pg'
 	gem 'rspec-rails'
 end
 group :production do
-	gem 'pg', '~> 0.21.0'
+	gem 'pg'
 end
 group :asset do
 	# Use Puma as the app server
-	gem 'puma', '~> 3.7'
-	# Use SCSS for stylesheets
-	gem 'sass-rails', '~> 5.0'
+	gem 'puma'
 	# Use Uglifier as compressor for JavaScript assets
 	gem 'uglifier', '>= 1.3.0'
 	# See https://github.com/rails/execjs#readme for more supported runtimes
 	# gem 'therubyracer', platforms: :ruby
 	# Use CoffeeScript for .coffee assets and views
-	gem 'coffee-rails', '~> 4.2'
+	gem 'coffee-rails'
 
-	gem 'coffee-script-source', '1.8.0'
+	gem 'coffee-script-source'
 end
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -61,7 +61,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
+  gem 'capybara'
   gem 'selenium-webdriver'
 end
 

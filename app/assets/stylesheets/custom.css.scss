@@ -1,7 +1,6 @@
 @import "bootstrap";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
-@import "font-awesome-sprockets";
 @import "font-awesome";
 @import "font-awesome/variables";
 @import "font-awesome/mixins";
@@ -10,7 +9,12 @@
 
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
+$gray-300: #E0E0E0;
+$gray-200: #EEEEEE;
+$gray-400: #BDBDBD;
+$gray-500: #9E9E9E;
 $blue: #003eff;
+$indigo: #7986CB;
 $breadcrumb-divider: quote("|");
 
 @mixin box_sizing {
@@ -178,7 +182,7 @@ p {
 }
 
 .navbar-toggler-icon{
-	background-image: $navbar-dark-toggler-icon-bg;
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{rgba($white, .55);}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
 
 .btn-light{
