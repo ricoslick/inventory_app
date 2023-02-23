@@ -1,7 +1,7 @@
 databases:
   - name: inventory_app
     databaseName: inventory_pdb
-    user: postgres
+    user: inventory_app
 
 services:
   - type: web
