@@ -302,6 +302,7 @@ DEPENDENCIES
   coffee-script-source
   font-awesome-sass (~> 6.2.1)
   jbuilder
+  matrix
   mimemagic (~> 0.4.3)
   paperclip
   pg
