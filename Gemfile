@@ -39,7 +39,7 @@ group :asset do
 	# Use Puma as the app server
 	gem 'puma'
 	# Use Uglifier as compressor for JavaScript assets
-	gem 'uglifier', '~> 2.7'
+	gem 'uglifier', '>= 4.2'
 	# See https://github.com/rails/execjs#readme for more supported runtimes
 	# gem 'therubyracer', platforms: :ruby
 	# Use CoffeeScript for .coffee assets and views
