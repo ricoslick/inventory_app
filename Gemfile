@@ -26,6 +26,7 @@ gem 'axlsx'
 gem 'rubyzip'
 gem 'prawn-table'
 
+
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 group :development, :test do
@@ -39,8 +40,9 @@ group :asset do
 	# Use Puma as the app server
 	gem 'puma'
 	# Use Uglifier as compressor for JavaScript assets
-	# gem 'uglifier', '~> 2.6.1'
+	# gem 'uglifier', '>= 4.2'
 	gem 'terser'
+	gem 'babel-transpiler'
 	# See https://github.com/rails/execjs#readme for more supported runtimes
 	# gem 'therubyracer', platforms: :ruby
 	# Use CoffeeScript for .coffee assets and views
