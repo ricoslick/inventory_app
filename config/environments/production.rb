@@ -25,17 +25,7 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :terser
-  Sprockets::Environment.js_compressor=
-
-    module Sprockets
-      class Environment < Base
-        def js_compressor=(compressor)
-          register_compressor 'application/javascript', :terser, Terser::Compressor
-          super
-        end
-      end
-    end
-
+ 
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
