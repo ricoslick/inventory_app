@@ -25,7 +25,7 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :terser
-  Sprockets::Environment.js_compressor=:
+  Sprockets::Environment.js_compressor=
 
     module Sprockets
       class Environment < Base
