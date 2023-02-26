@@ -25,6 +25,7 @@ gem 'axlsx_rails'
 gem 'axlsx'
 gem 'rubyzip'
 gem 'prawn-table'
+gem 'requirejs-rails'
 
 
 # Use sqlite3 as the database for Active Record
