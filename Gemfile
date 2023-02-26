@@ -25,8 +25,6 @@ gem 'axlsx_rails'
 gem 'axlsx'
 gem 'rubyzip'
 gem 'prawn-table'
-gem 'requirejs-rails'
-gem 'erubis', '~> 2.7'
 
 
 # Use sqlite3 as the database for Active Record
@@ -42,7 +40,7 @@ group :asset do
 	# Use Puma as the app server
 	gem 'puma'
 	# Use Uglifier as compressor for JavaScript assets
-	gem 'uglifier', '>= 4.2'
+	gem 'uglifier', '>= 2.3'
 	# gem 'terser'
 	gem 'babel-transpiler'
 	# See https://github.com/rails/execjs#readme for more supported runtimes
