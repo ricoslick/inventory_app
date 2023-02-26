@@ -26,6 +26,7 @@ gem 'axlsx'
 gem 'rubyzip'
 gem 'prawn-table'
 gem 'requirejs-rails'
+gem 'erubis', '~> 2.7'
 
 
 # Use sqlite3 as the database for Active Record
