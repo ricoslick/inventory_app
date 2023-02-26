@@ -5,6 +5,6 @@ set -o errexit
 bundle install
 bundle exec rake assets:precompile
 bundle exec rake assets:clean
-bin/rails db:environment:set RAILS_ENV=production
+rails db:environment:set RAILS_ENV=production
 bundle exec rake db:migrate:reset
 bundle exec rake db:migrate
